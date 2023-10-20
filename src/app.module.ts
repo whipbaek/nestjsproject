@@ -3,6 +3,7 @@ import { BoardsModule } from './boards/boards.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Board } from './boards/board.entity';
 import { DataSource } from 'typeorm';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { DataSource } from 'typeorm';
       synchronize: true,
     }),
     BoardsModule,
+    AuthModule,
   ],
 })
 export class AppModule {
